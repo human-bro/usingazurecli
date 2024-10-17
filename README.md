@@ -12,12 +12,20 @@ Commands on using azure command line
 # Uploading the folder in azure storage container
 
 ## setup 
- ```STORAGE_ACCOUNT_NAME="" ```
- ``` CONTAINER_NAME="" ```
- ``` LOCAL_FOLDER_PATH="path" ```
+ ```
+ STORAGE_ACCOUNT_NAME=""
+ ```
+ ``` 
+ CONTAINER_NAME=""
+```
+``` 
+LOCAL_FOLDER_PATH="path"
+```
 ### Try creating a new folder for uploading the files if you want it organized because when you type folder/ as local_folder it will upload contents of folder/ not with folder so try creating a folder inside a folder like folder/folder now if you give folder it will also upload folder/
 ### To upload the folder to storage container
-``` az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --destination $CONTAINER_NAME --source $LOCAL_FOLDER_PATH --auth-mode login ```
+``` 
+az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --destination $CONTAINER_NAME --source $LOCAL_FOLDER_PATH --auth-mode login
+```
 
 
 ---
@@ -26,29 +34,43 @@ Commands on using azure command line
 
 ## To run a command in background like wget or appache serve commands which should makes terminal with continous logs you can use
 
-``` nohup wget https://download_link &> wget.log & ```
+``` 
+nohup wget https://download_link &> wget.log &
+```
 
 ## To view whats happening with command
 
-``` tail -f wget.log ```
+``` 
+tail -f wget.log
+```
 
 ## or you can also use screen which open a new session in the terminal to exit you press ctrl+d
-``` screen ```
+``` 
+screen
+```
 
 ## To check available disk or space 
 
-``` df -h ```
+``` 
+df -h
+```
 
 ### for full check
 
 ## To check space occupied by the folder you can use
 
-``` du -sh path_to_folder ```
+```
+du -sh path_to_folder
+```
 
 or 
 
-```du -h /path_to_folder ```
+```
+du -h /path_to_folder
+```
 
 ## To delete a set of folder from a txt file the folder will have all the folder names to be deleted we use xargs to pass it to rm -rf
-```xargs rm -rf < folders.txt```
+```
+xargs rm -rf < folders.txt
+```
 
